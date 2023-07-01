@@ -13,5 +13,7 @@
             "email": "erykscarabello97@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "doctrine/orm": "^2.15"
+    }
 }
