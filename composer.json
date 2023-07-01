@@ -1,0 +1,17 @@
+{
+    "name": "erykscarabellodias/cadastro-nis",
+    "description": "Aplicação para cadastro de pessoas e criação de código NIS",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "CadastroNis\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "erykscarabellodias",
+            "email": "erykscarabello97@gmail.com"
+        }
+    ],
+    "require": {}
+}
