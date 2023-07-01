@@ -14,4 +14,4 @@ if (!array_key_exists($endereco, $rotas)) {
 
 $controladorSelecionado = $rotas[$endereco];
 $controller = new $controladorSelecionado;
-$controller->processarRequisicao();
+$controller->executar();
