@@ -2,6 +2,11 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
+use CadastroNis\backend\config\db\DatabaseConnection;
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->safeLoad();
+
 $endereco = $_SERVER['PATH_INFO'];
 
 $rotas = require __DIR__ . '/../src/backend/rotas.php';
@@ -11,6 +16,8 @@ if (!array_key_exists($endereco, $rotas)) {
 
     exit();
 }
+
+new DatabaseConnection();
 
 $controladorSelecionado = $rotas[$endereco];
 $controller = new $controladorSelecionado;
