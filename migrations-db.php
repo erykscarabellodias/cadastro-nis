@@ -11,6 +11,7 @@ return DriverManager::getConnection([
     'dbname' => $_ENV['DB_NAME'],
     'user' => $_ENV['DB_USERNAME'],
     'password' => $_ENV['DB_PASSWORD'],
+    'port' => $_ENV['DB_PORT'],
     'host' => $_ENV['DB_HOST'],
-    'driver' => $_ENV['DB_DRIVER'],
+    'driver' => $_ENV['DB_DRIVER_MIGRATION'],
 ]);

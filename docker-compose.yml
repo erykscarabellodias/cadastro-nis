@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'cadastro-nis'
+      MYSQL_USER: 'cadastro-nis'
+      MYSQL_PASSWORD: 'NKNctwkfbI'
+    ports:
+      - '3307:3306'
+    expose:
+      - '3306'
+    volumes:
+      - cadastro-nis-db:/var/lib/mysql
+volumes:
+  cadastro-nis-db:
