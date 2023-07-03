@@ -23,7 +23,7 @@
                             <a class="nav-link" href="?r=cadastrar-cidadao">Cadastrar cidadão</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="?r=buscar-cidadao">Buscar cidadão</a>
+                            <a class="nav-link" href="?r=consultar-nis">Consultar NIS</a>
                         </li>
                     </ul>
                 </div>
