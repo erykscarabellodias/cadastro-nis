@@ -1,0 +1,51 @@
+FORMAT: 1A
+
+# Cadastro de Cidadãos no NIS
+
+API para cadastro de cidadãos e criação de códigos NIS.
+
+# Group Cidadão
+
+Rotas referentes ao cidadão.
+
+## Cadastrar cidadão [/cadastrar-cidadao]
+
+### Cadastrar [POST]
++ nomeCompleto (string, required) - O nome completo do cidadão que você deseja cadastrar.
+
++ Request (application/json)
+
+        {
+            "nomeCompleto": "João da Silva"
+        }
+
++ Response 201 (application/json)
+
+        {
+            "id": 1,
+            "nome_completo": "João da Silva",
+            "codigo_nis": "98765432101",
+        }
+
+
+## Buscar cidadão por NIS [/buscar-cidadao]
+
+### Buscar [GET]
+Rota utilizada para buscar um código NIS e verificar se ele tem algum cidadão vinculado à ele.
+
++ Parameters
+    + codigoNis (string, required) - O código NIS que você deseja buscar. Ele deve conter 11 caracteres, todos numéricos.
+
++ Response 200 (application/json)
+
+        {
+            "id": 1,
+            "nome_completo": "João da Silva",
+            "codigo_nis": "98765432101",
+        }
+
++ Response 400 (application/json)
+
+        {
+            "message": "Cidadão não encontrado"
+        }
