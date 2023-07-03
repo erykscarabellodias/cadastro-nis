@@ -6,6 +6,6 @@ use CadastroNis\backend\modules\cidadaos\useCases\buscarCidadao\BuscarCidadaoCon
 use CadastroNis\backend\modules\cidadaos\useCases\criarCidadao\CriarCidadaoController;
 
 return [
-    '/cadastrar-cidadao' => CriarCidadaoController::class,
-    '/buscar-cidadao' => BuscarCidadaoController::class,
+    'cadastrar-cidadao' => CriarCidadaoController::class,
+    'buscar-cidadao' => BuscarCidadaoController::class,
 ];

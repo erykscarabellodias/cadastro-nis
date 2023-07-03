@@ -7,7 +7,13 @@ use CadastroNis\backend\config\db\DatabaseConnection;
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
 $dotenv->safeLoad();
 
-$endereco = $_SERVER['PATH_INFO'];
+if (!$_GET['r']) {
+    http_response_code(404);
+
+    exit();
+}
+
+$endereco = $_GET['r'];
 
 $rotas = require __DIR__ . '/../src/backend/rotas.php';
 
