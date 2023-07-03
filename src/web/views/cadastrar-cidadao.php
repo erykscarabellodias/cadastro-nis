@@ -31,9 +31,10 @@
             $.ajax({
                 url: '<?= $_ENV['URL_API'] . '?r=cadastrar-cidadao' ?>',
                 method: 'POST',
-                data: {
-                    nomeCompleto
-                },
+                data: JSON.stringify({
+                    nomeCompleto: nomeCompleto
+                }),
+                contentType: 'application/json',
                 dataType: 'json',
 
                 beforeSend: function() {

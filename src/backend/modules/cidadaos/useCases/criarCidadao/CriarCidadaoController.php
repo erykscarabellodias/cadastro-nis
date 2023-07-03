@@ -17,15 +17,14 @@ class CriarCidadaoController implements ControllerInterface
                 throw new MethodNotAllowedException();
             }
 
+            $jsonBody = file_get_contents('php://input');
+            $data = json_decode($jsonBody);
+
             $cidadaoRepository = new CidadaoRepository();
             $codigoNis = new CodigoNis($cidadaoRepository);
-
             $cidadaoService = new CriarCidadaoService($cidadaoRepository, $codigoNis);
 
-            $nomeCompleto = $_POST['nomeCompleto'] ?? '';
-
-            $dto = new CriarCidadaoDto($nomeCompleto);
-
+            $dto = new CriarCidadaoDto($data->nomeCompleto ?? "");
             $cidadaoCriado = $cidadaoService->executar($dto);
 
             http_response_code(201);
