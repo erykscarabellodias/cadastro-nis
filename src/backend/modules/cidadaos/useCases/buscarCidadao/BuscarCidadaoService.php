@@ -25,6 +25,10 @@ class BuscarCidadaoService
             throw new BadRequestException('O campo codigoNis é obrigatório');
         }
 
+        if (strlen($dto->codigoNis) !== 11) {
+            throw new BadRequestException('O código nis deve conter exatamente 11 dígitos');
+        }
+
         $cidadaoEncontrado = $this->repository->buscarPorNis($dto->codigoNis);
 
         if (!$cidadaoEncontrado) {
