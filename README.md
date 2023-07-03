@@ -6,10 +6,10 @@ Projeto para cadastro de cidadãos e geração de códigos NIS no ato da criaç�
 
 ## Tecnologias utilizadas
 
-*`PHP` v8.1.10
-*`doctrine/migrations` v3.6.0
-*`illuminate/database` v10.14
-*`phpunit` v10
+* `PHP` v8.1.10
+* `doctrine/migrations` v3.6.0
+* `illuminate/database` v10.14
+* `phpunit` v10
 
 ## Estrutura da aplicação
 
@@ -37,13 +37,15 @@ As rotas disponíveis na aplicação são:
 
 ### API
 
-- cadastrar-cidadao (POST): rota utilizada para cadastrar um novo cidadão.
-- buscar-cidadao (GET): rota utilizada para buscar um cidadão de acordo com um código NIS.
+Há uma documentação básica das rotas da API dentro do diretório /docs. As rotas são:
+
+* cadastrar-cidadao (POST): rota utilizada para cadastrar um novo cidadão.
+* buscar-cidadao (GET): rota utilizada para buscar um cidadão de acordo com um código NIS.
 
 ## Frontend
 
-- cadastrar-cidadao: nesta tela é possível cadastrar novos cidadãos.
-- consultar-nis: nesta tela é possível buscar um cidadão com base em um código NIS.
+* cadastrar-cidadao: nesta tela é possível cadastrar novos cidadãos.
+* consultar-nis: nesta tela é possível buscar um cidadão com base em um código NIS.
 
 ## Testes
 
