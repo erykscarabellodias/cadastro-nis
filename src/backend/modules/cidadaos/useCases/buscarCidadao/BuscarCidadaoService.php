@@ -26,7 +26,11 @@ class BuscarCidadaoService
         }
 
         if (strlen($dto->codigoNis) !== 11) {
-            throw new BadRequestException('O código nis deve conter exatamente 11 dígitos');
+            throw new BadRequestException('O código NIS deve conter exatamente 11 dígitos');
+        }
+
+        if (!is_numeric($dto->codigoNis)) {
+            throw new BadRequestException('O código NIS é composto apenas por números');
         }
 
         $cidadaoEncontrado = $this->repository->buscarPorNis($dto->codigoNis);
