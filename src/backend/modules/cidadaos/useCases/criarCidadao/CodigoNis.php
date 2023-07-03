@@ -2,14 +2,14 @@
 
 namespace CadastroNis\backend\modules\cidadaos\useCases\criarCidadao;
 
-use CadastroNis\backend\modules\cidadaos\repositories\implementations\illuminate\CidadaoRepository;
+use CadastroNis\backend\modules\cidadaos\repositories\CidadaoRepositoryInterface;
 
 class CodigoNis
 {
-    public CidadaoRepository $repository;
+    public CidadaoRepositoryInterface $repository;
     public string $codigoNis = "";
 
-    public function __construct(CidadaoRepository $cidadaoRepository)
+    public function __construct(CidadaoRepositoryInterface $cidadaoRepository)
     {
         $this->repository = $cidadaoRepository;
     }
